@@ -1,0 +1,25 @@
+id						INT, PRIMARY KEY (=> AUTO_INCREMENT, NOT NULL, UNIQUE, INDEX)
+titolo					VARCHAR(200), NOT NULL
+autore					VARCHAR(255), NOT NULL
+prezzo_acquisto			DECIMAL(6, 2), NULL
+editore					VARCHAR(50), NOT NULL
+genere1					VARCHAR(15), NOT NULL, DEFAULT("altro")
+genere2					VARCHAR(15), NULL
+genere3					VARCHAR(15), NULL
+anno					YEAR, NULL
+isbn					CHAR(13), NOT NULL, INDEX, UNIQUE
+collocazione			VARCHAR(20), NOT NULL
+disponibilità			TINYINT, NOT NULL, DEFAULT(1)	
+quantità				TINYINT, NOT NULL, DEFAULT(1)
+trama					TEXT, NULL
+lingua					VARCHAR(5), NOT NULL, DEFAULT("it_IT")
+numero_pagine			SMALLINT, NULL
+fascia_età				VARCHAR(5), NULL
+collana					VARCHAR(20), NULL
+prestabile				TINYINT, NOT NULL, DEFAULT(1)
+numero_prestiti			SMALLINT, NULL, DEFAULT(0)
+data_inizio_prestito	DATE, NULL
+data_fine_prestito		DATE, NULL
+ristampe				SMALLINT, NULL
+condizione				VARCHAR(20), NULL
+note					VARCHAR(255), NULL
